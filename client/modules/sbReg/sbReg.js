@@ -119,8 +119,11 @@ sbReg.directive('sbReg', ['$state', 'UserService', 'TokenService', 'AuthService'
 									scope.users.regMessage = 'Sorry, your apikey and token have expired'
 									scope.users.regState= 'Get apikey'
 								}else{
+									//AuthService.test(); runs test to see if token interceptor passes token
+									//and gets auth and data from server
 									if (data){
 										scope.users[name]=data.items;
+										UserService.setAl(scope.users)
 									}
 									UserService.makeActive(name)
 									cfg.afterReg(name);
@@ -144,7 +147,7 @@ sbReg.directive('sbReg', ['$state', 'UserService', 'TokenService', 'AuthService'
 						scope.users.userList.push(scope.username);
 						scope.users.userList=_.uniq(scope.users.userList)
 						scope.users[scope.username]= {name: scope.username, email: scope.email}
-						UserService.LSsave();
+						UserService.LSsave(scope.users);
 						scope.users.regState = 'Get token';
 						scope.users.regMessage = response+': Check email for apikey and enter here to get token be finished registration'
 						break;
@@ -167,7 +170,7 @@ sbReg.directive('sbReg', ['$state', 'UserService', 'TokenService', 'AuthService'
 						UserService.dBget(name)
 							.then(function(data){
 								scope.users[name]=data.items;
-								UserService.LSsave();
+								UserService.LSsave(scope.users);
 								UserService.setRegMessage( 'all set you are authorized and have token');
 								UserService.makeActive(scope.username);
 								UserService.setRegState('Authenticated, go to Lists');
@@ -256,6 +259,24 @@ sbReg.factory('AuthService', ['$http', '$q', 'cfg', function($http, $q, cfg) {
 				deferred.reject({message: 'server is down'})
 			});
 			return deferred.promise;
+		}, 
+		test: function(){
+			var url=serverUrl + 'account';     
+			var deferred = $q.defer();
+			$http.get(url).   
+			success(function(data, status) {
+				console.log('testing token-auth, should return user record and 200')
+				console.log(data);
+				console.log(status);
+				deferred.resolve(data);
+			}).
+			error(function(data, status){
+				console.log(data || "Request failed");
+				console.log(status);
+				deferred.reject({message: 'server is down'})
+			});
+			return deferred.promise;
+
 		}    
 	}
 }]);
@@ -309,6 +330,7 @@ sbReg.factory('TokenInterceptor', ['$q', '$injector', 'cfg', function ($q, $inje
             if (tok) {
                     config.headers.Authorization = 'Bearer ' + tok
             }
+            //console.log(config.headers)
             return config;
         },
         requestError: function(rejection) {
@@ -343,7 +365,15 @@ sbReg.factory('UserService',  ['$http', 'cfg', '$q', function($http, cfg, $q){
 	var httpLoc = cfg.setup().url;	
 	return{
 		al: al,
-		LSsave: function(){
+		setAl: function(nal){
+			al = nal;
+			localStorage.setItem(ls, JSON.stringify(al));
+		},
+		getAl: function(){
+			return al;
+		},
+		LSsave: function(nal){
+			al = nal;
 			localStorage.setItem(ls, JSON.stringify(al));
 		},
 		makeDefListInfo: function(listInfo){

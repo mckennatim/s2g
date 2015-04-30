@@ -1,0 +1,498 @@
+{
+    "Tamaki": {
+        "_id": "5430c9e21f6cbc3a4e7aa8f2",
+        "lid": "Tamaki",
+        "shops": "down center",
+        "timestamp": "1428861177037",
+        "users": ["tim", "peri", "noah"],
+        "items": [{
+            "done": false,
+            "product": "silicone caulk"
+        }, {
+            "done": false,
+            "product": "keys"
+        }, {
+            "done": true,
+            "product": "bath ceiling wall paint"
+        }, {
+            "done": true,
+            "product": "shelf clips"
+        }, {
+            "done": true,
+            "product": "coffee"
+        }, {
+            "done": true,
+            "product": "spindle"
+        }, {
+            "done": true,
+            "product": "set screws"
+        }, {
+            "done": true,
+            "product": "doorbells"
+        }, {
+            "done": true,
+            "product": "grout sealer"
+        }, {
+            "done": true,
+            "product": "1/2 male adapter"
+        }, {
+            "done": true,
+            "product": "AAA batteries"
+        }, {
+            "done": true,
+            "product": "cr2032 battery"
+        }, {
+            "done": true,
+            "product": "dishwasher brush"
+        }, {
+            "done": true,
+            "product": "mirror 20-7/16x34-3/16"
+        }, {
+            "done": true,
+            "product": "sandpaper"
+        }, {
+            "done": true,
+            "product": "wood filler"
+        }, {
+            "done": true,
+            "product": "brass screws"
+        }, {
+            "done": true,
+            "product": "silicone spray"
+        }, {
+            "done": true,
+            "product": "square bit"
+        }, {
+            "done": true,
+            "product": "led lights"
+        }, {
+            "done": true,
+            "product": "hinges"
+        }],
+        "stores": []
+    },
+    "activeList": "Camala",
+    "Jutebi": {
+        "_id": "5430c9e21f6cbc3a4e7aa8ee",
+        "lid": "Jutebi",
+        "shops": "groceries",
+        "timestamp": "1428861211464",
+        "users": ["tim7", "tim1", "peri", "noah", "tim", "demo"],
+        "items": [{
+            "loc": "bake-cook",
+            "done": false,
+            "product": "Vanilla extract"
+        }, {
+            "loc": "produce",
+            "done": false,
+            "product": "Onion"
+        }, {
+            "loc": "produce",
+            "done": false,
+            "product": "Lime"
+        }, {
+            "amt": {
+                "unit": "pints",
+                "qty": "2"
+            },
+            "loc": "deli",
+            "tags": [],
+            "done": false,
+            "product": "Kalamata pitted olives"
+        }, {
+            "tags": ["King Arthur"],
+            "amt": {
+                "unit": "lb",
+                "qty": "5"
+            },
+            "loc": "bake-cook",
+            "done": false,
+            "product": "white flour"
+        }, {
+            "done": false,
+            "product": "frogs"
+        }, {
+            "loc": "bake-cook",
+            "done": false,
+            "product": "Peanut oil"
+        }, {
+            "loc": "dairy",
+            "done": false,
+            "product": "butter"
+        }, {
+            "loc": "canned",
+            "done": true,
+            "product": "Purple olives"
+        }, {
+            "loc": "produce",
+            "done": true,
+            "product": "Garlic"
+        }, {
+            "amt": {
+                "unit": "pc",
+                "qty": "3"
+            },
+            "loc": "produce",
+            "done": true,
+            "product": "Fresh ginger"
+        }, {
+            "loc": "dairy",
+            "done": true,
+            "product": "eggs"
+        }, {
+            "loc": "dairy",
+            "done": true,
+            "product": "cream"
+        }, {
+            "loc": "produce",
+            "done": true,
+            "product": "Celery"
+        }, {
+            "done": true,
+            "product": "Cayenne powder"
+        }, {
+            "done": true,
+            "product": "Brewers Yeast"
+        }, {
+            "done": true,
+            "product": "Arrowroot"
+        }, {
+            "tags": ["mad from dogs"],
+            "loc": "bake-cook",
+            "done": true,
+            "product": "Apple cider vinegar"
+        }],
+        "stores": [{
+            "name": "Stop&Shop",
+            "id": "s_Bereti"
+        }, {
+            "name": "WholeFoods",
+            "id": "s_Bereto"
+        }]
+    },
+    "Kiyidu": {
+        "_id": "5447abd0e47010336375bb1c",
+        "lid": "Kiyidu",
+        "shops": "2Chestnut",
+        "timestamp": "1422224960665",
+        "users": ["tim"],
+        "items": [{
+            "done": false,
+            "product": "air hose"
+        }, {
+            "done": false,
+            "product": "framing nailer"
+        }, {
+            "done": false,
+            "product": "finish nailer"
+        }, {
+            "done": false,
+            "product": "battery tools"
+        }, {
+            "done": false,
+            "product": "yellow pine"
+        }, {
+            "done": false,
+            "product": "tape measure"
+        }, {
+            "done": false,
+            "product": "sanding supplies"
+        }, {
+            "done": false,
+            "product": "bath paint"
+        }, {
+            "done": false,
+            "product": "scrapers"
+        }, {
+            "done": false,
+            "product": "screw drivers"
+        }, {
+            "done": true,
+            "product": "sharp tools"
+        }, {
+            "done": true,
+            "product": "roof stuff"
+        }, {
+            "done": true,
+            "product": "rags"
+        }, {
+            "done": true,
+            "product": "pine"
+        }, {
+            "done": true,
+            "product": "hand truck"
+        }, {
+            "done": true,
+            "product": "formica"
+        }, {
+            "done": true,
+            "product": "dremel"
+        }, {
+            "done": true,
+            "product": "clamp"
+        }, {
+            "done": true,
+            "product": "apt 5 key"
+        }],
+        "stores": []
+    },
+    "Fazizu": {
+        "_id": "5449098fe47010336375bb24",
+        "lid": "Fazizu",
+        "shops": "bugs",
+        "timestamp": "1428861207519",
+        "users": ["tim"],
+        "items": [{
+            "done": false,
+            "product": "user controller features"
+        }, {
+            "done": false,
+            "product": "move restorung"
+        }, {
+            "done": true,
+            "product": "disappearing lists"
+        }, {
+            "done": true,
+            "product": "create demo"
+        }, {
+            "done": true,
+            "product": "scroll 2 top"
+        }, {
+            "done": true,
+            "product": "sort by store"
+        }, {
+            "done": true,
+            "product": "wuff auth"
+        }, {
+            "done": true,
+            "product": "aws s3 backup"
+        }, {
+            "done": true,
+            "product": "move blog"
+        }, {
+            "done": true,
+            "product": "move wiki"
+        }],
+        "stores": []
+    },
+    "Minohu": {
+        "_id": "5448fbdee47010336375bb22",
+        "lid": "Minohu",
+        "shops": "lowes depot",
+        "timestamp": "1418665372206",
+        "users": ["tim"],
+        "items": [{
+            "done": true,
+            "product": "brass screw"
+        }, {
+            "amt": {
+                "unit": "",
+                "qty": ""
+            },
+            "done": true,
+            "product": "shower rods"
+        }, {
+            "done": true,
+            "product": "15 lb guage fill"
+        }, {
+            "done": true,
+            "product": "handle puller"
+        }, {
+            "done": true,
+            "product": "glass for light 3-3/16"
+        }, {
+            "done": true,
+            "product": "ice machine cap"
+        }, {
+            "done": true,
+            "product": "grout sealer"
+        }, {
+            "done": true,
+            "product": "glass 27x26"
+        }, {
+            "done": true,
+            "product": "1/2 male adapter"
+        }, {
+            "tags": ["Lowes Item #: 297598 | Model #: 41660"],
+            "done": true,
+            "product": "Style Selections Euro Vanity White Belly Bowl Single Sink Bathroom Vanity with Vitreous China Top (Common: 24-in x 17-in"
+        }, {
+            "done": true,
+            "product": "door knob"
+        }, {
+            "done": true,
+            "product": "drain cleaner"
+        }, {
+            "done": true,
+            "product": "drain pvc for kitchen, lav and basement"
+        }, {
+            "done": true,
+            "product": "supplies kitchen bath toilet"
+        }, {
+            "done": true,
+            "product": "tan grout"
+        }, {
+            "done": true,
+            "product": "tile"
+        }, {
+            "done": true,
+            "product": "sandpaper"
+        }, {
+            "amt": {
+                "unit": "in",
+                "qty": ""
+            },
+            "tags": ["22&35 Hampton Bay Model # 494852M6 Internet # 203243111 Store SKU # 634355"],
+            "done": true,
+            "product": "Countertop 72 in. Marbella in Breccia Nouvelle"
+        }, {
+            "tags": ["Store SKU # 634678"],
+            "done": true,
+            "product": "Countertop 120 in. Marbella in Breccia Nouvelle"
+        }, {
+            "amt": {
+                "unit": "",
+                "qty": ""
+            },
+            "tags": ["HD Breccia Nouvelle Model # 494852MECK Internet # 203243125 Store SKU # 631456"],
+            "done": true,
+            "product": "countertop endcaps"
+        }, {
+            "tags": ["1dd", "1sd", "3ds", "19o"],
+            "done": true,
+            "product": "electrical plates"
+        }, {
+            "done": true,
+            "product": "finish screws"
+        }, {
+            "done": true,
+            "product": "oak flooring"
+        }, {
+            "done": true,
+            "product": "roof stairs 25x53.5x8'4.5"
+        }, {
+            "tags": ["$48@homedeopot FireX Model # KN COSM IBA Internet # 205465828 Store SKU # 1000535870"],
+            "done": true,
+            "product": "smoke/co detector"
+        }, {
+            "tags": ["16\"L5o $149 item #: 331676 | Model #: 11464-0"],
+            "done": true,
+            "product": "toilet KOHLER Wellworth White"
+        }, {
+            "done": true,
+            "product": "26 balance 22 balance"
+        }, {
+            "done": true,
+            "product": "sink supports"
+        }, {
+            "done": true,
+            "product": "triangle scraper"
+        }, {
+            "done": true,
+            "product": "faucet restrict"
+        }, {
+            "done": true,
+            "product": "light fixture parts"
+        }, {
+            "done": true,
+            "product": "drawer pull"
+        }, {
+            "done": true,
+            "product": "ice maker"
+        }, {
+            "done": true,
+            "product": "aerator"
+        }, {
+            "done": true,
+            "product": "symmons parts"
+        }, {
+            "done": true,
+            "product": "4-1/2 5 x1"
+        }, {
+            "done": true,
+            "product": "shower head"
+        }, {
+            "done": true,
+            "product": "shelf 34_5/8 33_3/4"
+        }, {
+            "done": true,
+            "product": "shower head"
+        }, {
+            "done": true,
+            "product": "smoke detector"
+        }, {
+            "done": true,
+            "product": "sibk xlips"
+        }, {
+            "done": true,
+            "product": "38tand shutoff"
+        }],
+        "stores": []
+    },
+    "Camala": {
+        "_id": "546dedbd408c654a12409bb1",
+        "lid": "Camala",
+        "shops": "economy",
+        "timestamp": "1418087443618",
+        "users": ["tim"],
+        "items": [{
+            "done": true,
+            "product": "pipe dope"
+        }, {
+            "done": true,
+            "product": "(3)1\" close hangers"
+        }, {
+            "done": true,
+            "product": "(4) 10' 1\" BI"
+        }, {
+            "done": true,
+            "product": "(2) 3/4 elbows"
+        }, {
+            "done": true,
+            "product": "nipple rise"
+        }, {
+            "done": true,
+            "product": "8' connector kit from 1/8\"x1/4 compression for fridge"
+        }, {
+            "done": true,
+            "product": "aerator"
+        }, {
+            "done": true,
+            "product": "3/4x1 reducer elbow BI"
+        }, {
+            "done": true,
+            "product": "3/4 union"
+        }, {
+            "done": true,
+            "product": "1\" union"
+        }, {
+            "done": true,
+            "product": "3/4x1x1 Tee BI"
+        }, {
+            "done": true,
+            "product": "(3) 1\" coupling"
+        }, {
+            "done": true,
+            "product": "(3) 1\"elbows"
+        }, {
+            "done": true,
+            "product": "1x3/4x1 Tee BI"
+        }, {
+            "done": true,
+            "product": "TA10-3HL min flow spindle"
+        }, {
+            "done": true,
+            "product": "1x3/4 reducer coupling bi"
+        }, {
+            "done": false,
+            "product": "sweatshirt"
+        }, {
+            "done": false,
+            "product": "lamps"
+        }, {
+            "done": false,
+            "product": "garlic press"
+        }],
+        "stores": []
+    }
+}

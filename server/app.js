@@ -39,13 +39,21 @@ var routes = require('./reg/routes')(passport);
 app.use('/', routes);
 var myroutes = require('./routes')(passport);
 app.use('/', myroutes);
+var listroutes = require('./lists/routes')(passport);
+app.use('/', listroutes);
 
 // development error handler
 // will print stacktrace
+//For a json API service you probably don't need 
+//to render anything so just don't call render(), instead call res.send()
 if (app.get('env') === 'development') {
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
-        res.render('error', {
+        // res.render('error', {
+        //     message: err.message,
+        //     error: err
+        // });
+        res.send({
             message: err.message,
             error: err
         });

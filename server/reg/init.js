@@ -54,7 +54,8 @@ module.exports = function(passport) {
 							return done(null, null);
 						});
 					} catch (err) {
-						return done(err, null);
+						var er = {status: 401, message: 'jwt- Signature verification failed - unauthorized' }
+						return done(er, null);
 					}
 				}				
 			});

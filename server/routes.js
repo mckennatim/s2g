@@ -15,7 +15,9 @@ var isRightList = function(lists, list){
 }
 
 module.exports = function(passport){
-	router.get('api/dog/', function(req, res) {
+	router.get('/api/dog', 
+		passport.authenticate('bearer', { session: false }), 
+		function(req, res) {
 		res.jsonp('You are a dog, Uli')
 	});	
 	

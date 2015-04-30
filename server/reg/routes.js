@@ -15,7 +15,7 @@ console.log(smtpTransport.options.service)
 var blankUser= {name: '', email: '', lists:[], role:'', timestamp: 1, apikey: ''};
 
 emailKey =function(items, callback){
-	fs.writeFile("node-token-auth/key", items.apikey, function(err){
+	fs.writeFile("key", items.apikey, function(err){
 	    if(err) {
 	        cons.log(err);
 	    } else {
@@ -68,7 +68,7 @@ var createRandomWord = function(length) {
 module.exports = function(passport) {
 	router.get('/api', function(req, res) {
 		// Display the Login page with any flash message, if any
-		res.jsonp('at the root of nothing');
+		res.jsonp('at the root of nothing in reg');
 	});
 	router.get('/api/isers', function(req, res) {
 		console.log('in api/isers uu')
@@ -193,6 +193,13 @@ module.exports = function(passport) {
 			res.jsonp(req.user)
 		}
 	);
+	router.get('/api/cat', 
+		passport.authenticate('bearer', { session: false }), 
+		function(req, res) {
+			res.jsonp('You are a cat, mabibi')
+		}
+	);	
+	
 
 	return router;
 }

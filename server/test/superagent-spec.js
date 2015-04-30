@@ -19,6 +19,7 @@ describe('superagent:', function() {
 	var token ='';
 	var eregtim = 'tim2@sitebuilt.net';
 	var enottim = 'mckenna.nottim@gmail.com';
+	var timtoken = jwt.encode({ name: 'tim' }, secret);
 	it('GET / should be running and return: please select...', function(done) {
 			superagent.get(httpLoc)
 				.end(function(e, res) {
@@ -62,7 +63,7 @@ describe('superagent:', function() {
 	})
 	describe('authenticate', function() {
 		it('reads apikey from file, expects it to be 24 characters' ,function(done){
-			fs.readFile('../node-token-auth/key', 'utf8', function(err, data) {
+			fs.readFile('./key', 'utf8', function(err, data) {
 				if (err) {
 					return console.log(err);
 				}
@@ -79,6 +80,7 @@ describe('superagent:', function() {
 					apikey: apikey
 				})
 				.end(function(e, res) {
+					console.log(apikey)
 					console.log(res.body)
 					var payload = {
 						name: ureg
@@ -124,11 +126,36 @@ describe('superagent:', function() {
 				.get(httpLoc + 'account/')
 				.set('Authorization', 'Bearer ' + token)
 				.end(function(e, res) {
+					console.log(e)
 					console.log(res.body)
 					expect(res.body.apikey).to.be(apikey);
 					done()
 				})
 		})
+		it('GETs fails 401(unauth) on api/account when no token', function(done) {
+			agent
+				.get(httpLoc + 'account/')
+				//.set('Authorization', 'Bearer ' + token+'4')
+				.end(function(e, res) {
+					console.log(e.status)
+					console.log(e.message)
+					console.log(res.body)
+					expect(e.status).to.be(401);
+					done()
+				})
+		})		
+		it('GETs fails api/account when bad token', function(done) {
+			agent
+				.get(httpLoc + 'account/')
+				.set('Authorization', 'Bearer ' + token+'4')
+				.end(function(e, res) {
+					console.log(e.status)
+					console.log(e.message)
+					console.log(res.body)
+					expect(e.status).to.be(401);
+					done()
+				})
+		})		
 		it('DELETES user tim2', function(done){
 			agent
 				.del(httpLoc + 'users/'+ureg)
@@ -140,6 +167,50 @@ describe('superagent:', function() {
 					done()
 				})			
 		})
+	})
+	describe('lists', function() {
+		it('GETs authenticated frog', function(done){
+			agent
+				.get(httpLoc + 'frog')
+				.set('Authorization', 'Bearer ' + timtoken)				
+				.end(function(e, res) {
+					console.log(res.body)
+					expect(res.body).to.be('You are a frog, Uli');
+					done()
+				})			
+		})
+		it('GETs authenticated dog', function(done){
+			agent
+				.get(httpLoc + 'dog')
+				.set('Authorization', 'Bearer ' + timtoken)				
+				.end(function(e, res) {
+					console.log(res.body)
+					expect(res.body).to.be('You are a dog, Uli');
+					done()
+				})			
+		})
+		it('GETs authenticated cat', function(done){
+			agent
+				.get(httpLoc + 'cat/')
+				.set('Authorization', 'Bearer ' + timtoken)				
+				.end(function(e, res) {
+					console.log(res.body)
+					expect(res.body).to.be('You are a cat, mabibi');
+					done()
+				})			
+		})
+		it('GETs succeeds w list from api/lists/Jutebi when passed token', function(done) {
+			agent
+				.get(httpLoc + 'lists/Jutebi')
+				.set('Authorization', 'Bearer ' + timtoken)
+				.end(function(e, res) {
+					//console.log(e)
+					console.log(res.body.shops)
+					expect(res.body.lid).to.be('Jutebi');
+					done()
+				})
+		})	
+
 	})
 })
 
